@@ -178,12 +178,12 @@ export default function Canvas() {
 
   const mergeBuffers = (bufferArray: Float32Array[]): Float32Array => {
     let totalLength = 0;
-    for (let buffer of bufferArray) {
+    for (const buffer of bufferArray) {
       totalLength += buffer.length;
     }
     const result = new Float32Array(totalLength);
     let offset = 0;
-    for (let buffer of bufferArray) {
+    for (const buffer of bufferArray) {
       result.set(buffer, offset);
       offset += buffer.length;
     }
